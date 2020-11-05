@@ -22,7 +22,8 @@
   justify-content: flex-start;
   position: relative;
   background-color:  #f2f2f2;
-  padding-left: 64px;
+  /*padding-left: 64px;*/
+  border: 1px solid red;
 }
 
 .logo {
@@ -34,54 +35,56 @@
 .logo_place_header {
   position: absolute;
   top: 30px;
+  left: 64px;
 }
 
-.title {
+.header__title {
   align-self: center;
   width: 730px;
   font-size: 102px;
   font-weight: bold;
   line-height: 96px;
-  z-index: 1;
+  z-index: 2;
+  margin-left: 64px;
 }
 
-.subtitle {
+.header__subtitle {
   position: absolute;
+  left: 64px;
   bottom: 30px;
-  width: 338px;
-  height: 50px;
+  width: 388px;
+  min-height: 50px;
+  line-height: 25px;
+  font-size: 18px;
   font-weight: normal;
   align-items: center;
+  z-index: 2;
+  
 }
 
-.link {
+.header__subtitle__link {
   color: #2f80ed;
   text-decoration: none;
 }
 
-.main-illustration {
+.header__main-illustration {
   position: absolute;
   right: 0;
+  bottom: 0;
   align-self: flex-end;
-  z-index: 1;
-}
-
-.main-illustration__image {
   width: 765px;
   height: 608px;
-}
-
-.square-pic {
-  background-color: #2f80ed;
-  position: absolute;
-  top: 64px;
-  right: 0;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  top: 64px;
+  right: 0;
 }
 
 /* Новый блок: discription */
@@ -89,40 +92,54 @@
 .description {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border: 1px solid red;
 }
 
 .two-columns {
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+
 }
 
 .two-columns__brief {
   width: 175px;
+  margin-top: 0;
+  margin-bottom: 0;
   color:  #2f80ed;
-  line-height: 1.2em;
+  line-height: 1.2;
   font-size: 18px;
+  font-weight: normal;
+  border: 1px solid red;
 }
 
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
-  min-height: 200px;
+  font-weight: normal;
+  border: 1px solid red;
 }
 
-.paragraph {
+.two-columns__paragraph {
 line-height: 34px;
-font-size: 18px;
+font-size: 24px;
 font-weight: normal;
+border: 1px solid red;
+margin-top: 0;
+margin-bottom: 0;
 }
 
-.paragraph-span {
-  margin-top: 30px;
+.two-columns__paragraph:first-child {
   margin-bottom: 30px;
 }
 
-.span-bold {
+.two-columns__paragraph:last-child {
+  margin-top: 30px;
+}
+
+.two-columns__span-accent {
   font-weight: bold;
 }
 
@@ -134,14 +151,18 @@ padding-bottom: 100px;
 display: flex;
 flex-direction: column;
 align-items: center;
+border: 1px solid red;
+margin: 0;
 }
 
 .section-title {
+  margin: 0;
   width: 60%;
   line-height: 1.15em;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
+  border: 1px solid red;
 }
 
 .section-subtitle {
@@ -150,7 +171,9 @@ align-items: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin-top: 20px;
   margin-bottom: 0;
+  border: 1px solid red;
 }
 
 .table {
@@ -159,25 +182,31 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 margin-top: 0;
+border: 1px solid red;
 }
 
-.cell {
+.table__cell {
   width: 250px;
   margin-top: 60px;
+  border: 1px solid red;
 }
 
-.heading {
+.table__heading {
   line-height: 1.15em;
   margin-top: 0;
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 0;
+  border: 1px solid red;
 }
 
-.text {
+.table__text {
   margin-top: 20px;
+  margin-bottom: 0;
   line-height: 1.2em;
   font-size: 18px;
   font-weight: normal;
+  border: 1px solid red;
 }
 
 /* Новый блок: Метод Фейнмана */
@@ -202,7 +231,6 @@ margin-top: 0;
 }
 
 .feynman__subtitle {
-  width: 648px;
   line-height: 51px;
   font-size: 35px;
   font-weight: normal;
@@ -241,6 +269,14 @@ margin-top: 0;
   overflow: hidden;
 }
 
+.section-title_theme_dark {
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark{
+  z-index: 1;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 
 .table__cell_theme_dark {
@@ -249,15 +285,19 @@ margin-top: 0;
   margin-right: 0;
   margin-top: 80px;
   z-index: 1;
+  border: 1px solid red;
 }
 
 .kaufman__triangle {
-  width: 887px;
-  height: 887px;
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
   align-self: flex-end;
   position: absolute;
   top: 0;
   right: -210px;
+  z-index: 0;
+  border: 1px solid red;
 }
 
 /* Блок footer*/
@@ -266,6 +306,7 @@ margin-top: 0;
   min-height: 350px;
   background-color: #1f1f1f;
   display: flex;
+  border: 1px solid red;
 }
 
 .footer__columns {
@@ -273,6 +314,8 @@ margin-top: 0;
   display: flex;
   margin: 60px auto 40px;
   justify-content: space-between;
+  border: 1px solid red;
+  
 }
 
 .footer__column_content_copyright {
@@ -280,11 +323,13 @@ margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid white;
 }
 
 .logo_place_footer {
   width: 183px;
   height: 35px;
+  border: 1px solid red;
 }
 
 .footer__author {
@@ -292,7 +337,16 @@ margin-top: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  margin: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin: 0;
+  border: 1px solid red;
+}
+
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
 }
 
 .footer__column-heading {
@@ -300,17 +354,30 @@ margin-top: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  border: 1px solid red;
 }
 
-.footer__columnn-links {
+.footer__column-links {
+  border: 1px solid red;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 20px;
+  
+
+}
+
+.footer__column-link {
   color: white;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
-  margin-bottom: 16px;
+  
+  
+  border: 1px solid red;
 }
 
 .footer__column_content_social {
@@ -320,18 +387,12 @@ margin-top: 0;
   color: white;
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  
-}
-
-.footer__column_content_info {
-  display: flex;
-  flex-direction: column;
-  
+  border: 1px solid red;
 }
 
 .footer__social-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
+  border: 1px solid red;
 }
