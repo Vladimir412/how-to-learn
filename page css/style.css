@@ -98,7 +98,6 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-
 }
 
 .two-columns__brief {
@@ -301,7 +300,6 @@ margin-top: 0;
   display: flex;
   margin: 60px auto 40px;
   justify-content: space-between;
-  
 }
 
 .footer__column_content_copyright {
@@ -345,8 +343,6 @@ margin-top: 0;
   flex-direction: column;
   padding: 0;
   margin-top: 20px;
-  
-
 }
 
 .footer__column-link {
